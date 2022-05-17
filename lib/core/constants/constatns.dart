@@ -7,7 +7,9 @@ class ColorConst {
   static Color iconColor = const Color(0xFFF1F2F6);
   static Color iconselectedbackcolor = const Color(0xFF31B9CC);
   static Color backgroundColor = const Color(0xFFE5E5E5);
-
+  static Color blue = const Color(0xff31B9CC);
+  static Color black = const Color(0xff0A191E);
+  static Color grey = const Color(0xff8F9698);
 
 
 

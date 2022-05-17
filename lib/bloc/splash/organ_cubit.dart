@@ -1,20 +1,21 @@
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:new_project/bloc/splash/organ_state..dart';
+import 'package:new_project/service/service.dart';
 
-class UsersCubit extends Cubit<UsersState> {
-  UsersCubit() : super(UsersInitial()) {
-    int indexCount = 0;
+class HomeCubit extends Cubit<UsersState> {
+  HomeCubit() : super(UsersInitial());
 
-    List api = [
-      "dasturlash",
-      "diazayn",
-      "smm",
-      "tillar",
-    ];
-
-    void addCound(index) {
-      indexCount = index;
-      
-    }
+  int indexCount = 0;
+  List apis = [
+    "dasturlashes",
+    "dizayns",
+    "smms",
+    "tils"
+  ];
+  void addCount(index){
+    indexCount = index;
+    MyApi.apiall = apis[index];
+    emit(UsersInitial());
   }
 }

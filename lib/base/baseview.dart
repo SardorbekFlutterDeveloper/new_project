@@ -1,5 +1,6 @@
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
+import 'package:new_project/views/home_page.dart';
 
 class BaseView<T> extends StatefulWidget {
   final T? viewModel;
@@ -12,7 +13,7 @@ class BaseView<T> extends StatefulWidget {
       required this.viewModel,
       required this.onPageBuilder,
       this.onModelReady,
-      this.onDispose})
+      this.onDispose, required MyHomePage viewModal})
       : super(key: key);
 
   @override

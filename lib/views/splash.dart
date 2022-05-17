@@ -9,6 +9,7 @@ import 'package:new_project/bloc/splash/organ_cubit.dart';
 
 import 'package:new_project/core/components/size_config.dart';
 import 'package:new_project/core/constants/constatns.dart';
+import 'package:new_project/extension/extenmsin.dart';
 import 'package:new_project/views/home_page.dart';
 
 class SplashPage extends StatefulWidget {
@@ -37,19 +38,24 @@ class _SplashPageState extends State<SplashPage> {
     return Scaffold(
       backgroundColor: Color(0xff050352),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Container(
-            padding: EdgeInsets.only(left: 130, top: 300),
+          SizedBox(
+            width: context.w,
+            height: context.h * 0.37,
+          ),
+          SizedBox(
+            height: context.h * 0.2,
             child: SvgPicture.asset(
               "assets/images/logo.svg",
               // color: Colors.blueAccent,
               color: Color.fromARGB(255, 77, 193, 243),
             ),
           ),
-          Container(
-            padding: const EdgeInsets.only(bottom: 20, left: 100),
+          SizedBox(
+            height: context.h * 0.30,
+          ),
+          SizedBox(
+            width: context.w * 0.5,
             child: SvgPicture.asset(
               "assets/images/text.svg",
               color: Colors.white,

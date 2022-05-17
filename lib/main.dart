@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:new_project/views/home_page.dart';
-import 'package:new_project/views/product.dart';
-import 'package:new_project/views/splash.dart';
+import 'package:new_project/core/routes/routes.dart';
+
 import 'package:new_project/views/usage.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  final _forRoute = Routes();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-      
-
         primarySwatch: Colors.blue,
       ),
-      home: UsagePage()
+      // home: UsagePage(),
+
+      initialRoute: '/splash',
+      onGenerateRoute: _forRoute.ongenerateRoute,
     );
   }
 }
