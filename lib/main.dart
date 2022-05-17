@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:new_project/views/home_page.dart';
+import 'package:new_project/views/product.dart';
+import 'package:new_project/views/splash.dart';
+import 'package:new_project/views/usage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,12 +16,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
-       
+      
+
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: UsagePage()
     );
   }
 }
